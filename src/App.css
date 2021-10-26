@@ -1,10 +1,25 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  background-color: black;
+  height: 80px;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+  margin: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
