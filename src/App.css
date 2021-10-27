@@ -4,12 +4,16 @@
 }
 header{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 10px;
   background-color: black;
   height: 80px;
+}
+header div h1{
+  color: white;
+  font-size: large;
 }
 nav{
   display: flex;
