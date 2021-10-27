@@ -5,6 +5,9 @@ const Navigation = () =>{
     return(
         <div>
             <header>
+                <div>
+                    <h1>Pearl Shine Motors</h1>
+                </div>
                 <nav>
                     <a href="#home">HOME</a>
                     <a href="#products">PRODUCTS</a>
