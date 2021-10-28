@@ -106,13 +106,32 @@ nav a {
   margin-right: auto;
   border-radius: 10px;
 }
-
-.card button {
-  margin-bottom: 30px;
+.add-to-cart button {
+  display: flex;
+  justify-content: space-between;
   color: white;
   background-color: black;
   padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
 }
+
+.cart-icon {
+  margin-right: 20px;
+}
+.units {
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
+#cart-order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: #000 1px solid;
+  display: none;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
