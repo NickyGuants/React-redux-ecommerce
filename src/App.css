@@ -1,8 +1,7 @@
-*{
+* {
   box-sizing: border-box;
-  
 }
-header{
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,17 +10,17 @@ header{
   background-color: black;
   height: 80px;
 }
-header div h1{
+header div h1 {
   color: white;
   font-size: large;
 }
-nav{
+nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
-nav a{
+nav a {
   text-decoration: none;
   color: white;
   margin: 20px;
@@ -34,7 +33,6 @@ nav a{
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .image {
@@ -77,14 +75,14 @@ nav a{
   transition-duration: 1s;
   transform: scale(1.08);
 }
-.container{
+.container {
   display: flex;
   margin: auto;
   flex-direction: column;
   margin-top: 20px;
   width: 78%;
 }
-.products{
+.products {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -92,30 +90,30 @@ nav a{
   margin-top: 20px;
 }
 
-.card{
-    width: 30%;
-    box-shadow: 0 4px 8px 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    border-radius: 10px;
+.card {
+  width: 30%;
+  box-shadow: 0 4px 8px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
 }
-.card img{
+.card img {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
 }
 
-.card button{
+.card button {
   margin-bottom: 30px;
   color: white;
   background-color: black;
   padding: 10px 10px 10px 10px;
 }
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
