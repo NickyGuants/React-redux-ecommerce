@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineShoppingCart} from 'react-icons/ai';
 import { vehicles } from "./vehicles";
 
 const Product =() =>{
@@ -13,7 +14,12 @@ const Product =() =>{
                             <p>Price: ${vehicle.price}</p>
                             <p>{vehicle.description}</p>
                             <div class="add-to-cart" >
-                                <button>Add to Cart</button>
+                                <button><AiOutlineShoppingCart className="cart-icon" />Add to Cart </button>
+                            </div>
+                            <div className="units">
+                                <div class="minus">-</div>
+                                <div class="number">Number</div>
+                                <div class="plus">+</div>   
                             </div>
                         </div>
                     )
