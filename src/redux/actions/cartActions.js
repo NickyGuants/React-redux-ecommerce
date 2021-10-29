@@ -1,9 +1,9 @@
 import { ADD_ITEM, REMOVE_ITEM } from "../types";
 
-export const addItem = (item) =>{
+export const addItem = (id) =>{
     return {
         type: ADD_ITEM,
-        payload: item,
+        payload: id,
     };
 };
 
