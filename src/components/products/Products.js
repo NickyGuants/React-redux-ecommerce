@@ -6,7 +6,7 @@ import { addItem } from '/home/nicky/react-ecommerce/src/redux/actions/cartActio
 import { Link } from 'react-router-dom'
 
 const Product = () => {
-    const  products  = useSelector((state) => state.cart.vehicles);
+    const products  = useSelector((state) => state.cart.vehicles);
     const dispatch = useDispatch();
 
     return (
