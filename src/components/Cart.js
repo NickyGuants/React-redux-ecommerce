@@ -1,10 +1,12 @@
 import React from "react";
+import '../App.css';
+
 
 const Cart = () => {
     return (
         <section id="cart-order">
             <div className="cart">
-                <div>
+                <div className="heading">
                     <div><h2>Shopping cart</h2></div>
                     <div><h2>3 Items</h2></div>
                 </div>
