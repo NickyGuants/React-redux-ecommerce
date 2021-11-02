@@ -15,12 +15,12 @@ export const removeItem = (id) =>{
     };
 };
 
-export const incrementItem = (id) =>  {
-    return{
+export const incrementItem = (id) => {
+    return {
         type: INCREMENT_ITEM,
         payload: id
-    }
-}
+    };
+};
 
 export const decrementItem = (id) => {
     return {
