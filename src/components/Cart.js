@@ -29,7 +29,7 @@ const Cart = () => {
                         {cartItems.map((item) => (
                             <tr>
                                 <td><img src={item.imgSrc} alt="" width="200px" /></td>
-                                <td><button onClick={() => {
+                                <td><div className="units-1"><button onClick={() => {
                                         if (item.quantity <= 1) {
                                             dispatch(removeItem(item.id));
                                         } else {
@@ -38,11 +38,11 @@ const Cart = () => {
                                 }}>-</button>
                                     {item.quantity}
                                     <button onClick={ () => dispatch(incrementItem(item.id))}>+</button>
-                                </td>
+                                </div></td>
                                 <td>${item.price}</td>
                                 <td>$0</td>
                                 <td>${item.price * item.quantity}</td>
-                                <td><button onClick={() => dispatch(removeItem(item.id))}>X</button></td>
+                                <td><button id="remove-item" onClick={() => dispatch(removeItem(item.id))}>X</button></td>
                             </tr>
                         ))}
                         </table>
