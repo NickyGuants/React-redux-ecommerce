@@ -124,7 +124,6 @@ nav ul li {
 .units {
   display: flex;
   flex-direction: row;
-  display: none;
 }
 #cart-order {
   width: 100%;
