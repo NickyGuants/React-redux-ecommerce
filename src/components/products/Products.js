@@ -31,6 +31,7 @@ const Product = () => {
                             <p>Price: ${vehicle.price}</p>
                             <p>{vehicle.description}</p>
                             {inCart ? (
+                            <div className="buttons">
                                 <div className="units">
                                     <button onClick={() => {
                                         if (fetchQuantity() <= 1) {
@@ -42,6 +43,10 @@ const Product = () => {
                                     <div class="number">{fetchQuantity()}</div>
                                 <button onClick={ () => dispatch(incrementItem(vehicle.id))}>+</button>  
                                 </div>
+                                <div>
+                                    <Link to="/cart"><button>View Cart</button></Link>
+                                </div>
+                            </div>
                             ) : (
                                 <div class="add-to-cart" >
                                 <button onClick={
