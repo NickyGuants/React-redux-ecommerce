@@ -1,45 +1,45 @@
 export const vehicles = [
     {
       id: 0,
-      name: "AUDI A3 CONVERTIBLE 2015",
-      price: 1000,
+      name: "AUDI S3",
+      price: 45000,
       make: "Audi",
-      model: "A3",
-      year: "2015",
+      model: "S3",
+      year: "2020",
       instock: 43,
       description:
       "AUDI A3 CONVERTIBLE 2015",
       imgSrc: "https://images.unsplash.com/photo-1589651756400-3cc85d74f743?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-      fuel: "",
-      transmission: ["Manual", "Automatic"],
-      engineSize: ""
+      fuelCapacity: "35L",
+      transmission: "Automatic",
+      engineSize: "2000cc"
     },
     {
       id: 1,
-      name: "Porshe",
-      price: 1000,
-      make: "",
-      model: "",
-      year: "",
+      name: "Ferrari SF90",
+      price: 500000,
+      make: "Ferrari",
+      model: "Stradale",
+      year: "2019",
       instock: 43,
       description:
-      "Porshe",
+      "Has a V8 engine with 720 horses",
       imgSrc: "https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      fuel: "",
-      transmission: ["Manual", "Automatic"],
-      engineSize: ""
+      fuelCapacity: "40L",
+      transmission: "Automatic",
+      engineSize: "4000cc twin Turbo"
       
     },
     {
       id: 2,
-      name: "Porshe",
-      price: 1000,
-      make: "",
-      model: "",
-      year: "",
+      name: "Chelby Mustang",
+      price: 180000,
+      make: "Ford",
+      model: "Mustang",
+      year: "2021",
       instock: 43,
       description:
-      "Porshe",
+      "Chelby Mustang",
       imgSrc: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
       fuel: "",
       transmission: ["Manual", "Automatic"],

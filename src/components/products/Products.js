@@ -48,11 +48,11 @@ const Product = () => {
                                 </div>
                             </div>
                             ) : (
-                                <div class="add-to-cart" >
+                            <div class="add-to-cart" >
                                 <button onClick={
                                     () => dispatch(addItem(vehicle.id))
                                 }><AiOutlineShoppingCart className="cart-icon" />Add to Cart </button>
-                                </div>        
+                            </div>        
                           ) }    
                         </div>
                     )
