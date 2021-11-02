@@ -49,15 +49,15 @@ const ProductDetails = () => {
                         </div>
                         <div className="details-item">
                         <h4>Fuel</h4>
-                        <p className="text-success">{vehicle[0].fuel}</p>
+                        <p className="text-success">{vehicle[0].fuelCapacity}</p>
                         </div>
                         <div className="details-item">
                         <h4>Transmission</h4>
-                        <p className="text-success">{vehicle[0].transmission[0]}</p>
+                        <p className="text-success">{vehicle[0].transmission}</p>
                         </div>
                         <div className="details-item">
                         <h4>Engine size</h4>
-                        <p className="text-success">{vehicle[0].engine_size}</p>
+                        <p className="text-success">{vehicle[0].engineSize}</p>
                         </div>
                     </div>
                     <div>
