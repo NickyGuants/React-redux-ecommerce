@@ -1,17 +1,20 @@
 import React from "react";
 import '../App.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { decrementItem, incrementItem, removeItem } from '/home/nicky/react-ecommerce/src/redux/actions/cartActions'
+
+
 
 const Cart = () => {
-    const cartItems = useSelector((state) => state.cart.cartItems)
-
+    const  cartItems  = useSelector((state) => state.cart.cartItems)
+    const dispatch = useDispatch();
     return (
         <section id="cart-order">
                 
                 <div className="cart">
                     <div className="heading">
                         <div><h2>Shopping cart</h2></div>
-                            <div><h2>{ cartItems.length}</h2></div>
+                            <div><h2>Items: { cartItems.length}</h2></div>
                         </div>
                     <div className="table">
                         <table>
@@ -20,29 +23,38 @@ const Cart = () => {
                                 <th>Quantity</th>
                                 <th>Price</th>
                                 <th>Discount</th>
-                                <th>Total</th>
+                            <th>Total</th>
+                            <th>Remove Item</th>
                         </tr>
                         {cartItems.map((item) => (
                             <tr>
-                                <td><img src={item.imgSrc} alt="" width="100px" /></td>
-                                <td>2</td>
+                                <td><img src={item.imgSrc} alt="" width="200px" /></td>
+                                <td><button onClick={() => {
+                                        if (item.quantity <= 1) {
+                                            dispatch(removeItem(item.id));
+                                        } else {
+                                            dispatch(decrementItem(item.id));
+                                        }
+                                }}>-</button>
+                                    {item.quantity}
+                                    <button onClick={ () => dispatch(incrementItem(item.id))}>+</button>
+                                </td>
                                 <td>${item.price}</td>
                                 <td>$0</td>
-                                <td>$4000</td>
+                                <td>${item.price * item.quantity}</td>
+                                <td><button onClick={() => dispatch(removeItem(item.id))}>X</button></td>
                             </tr>
                         ))}
                         </table>
-                        <div>
-                            <a href="#home">Continue shopping</a>
-                        </div>
                     </div>
                 </div>
-                <div className="order">
-                    <div>
-                        <h1>Order Summary</h1>
-                    </div>
-                    <div><button>Checkout</button></div>
-                    </div>
+            <div className="order">
+                <div><h1>Order Summary</h1></div>
+                <div id="links">
+                    <button>Checkout</button>
+                    <a href="#home">Continue shopping</a>
+                </div>
+            </div>
         </section>
     )
 }
