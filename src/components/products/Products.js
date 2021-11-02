@@ -27,9 +27,9 @@ const Product = () => {
                             <Link to={`/details/${vehicle.id}`}>
                             <img src={vehicle.imgSrc} alt={vehicle.name} />
                             </Link>
-                            <p>{vehicle.name}</p>
+                            <p>Model: {vehicle.make}</p>
+                            <p>Make: {vehicle.model}</p>
                             <p>Price: ${vehicle.price}</p>
-                            <p>{vehicle.description}</p>
                             {inCart ? (
                             <div className="buttons">
                                 <div className="units">
@@ -52,6 +52,8 @@ const Product = () => {
                                 <button onClick={
                                     () => dispatch(addItem(vehicle.id))
                                 }><AiOutlineShoppingCart className="cart-icon" />Add to Cart </button>
+                                
+                            <Link to={`/details/${vehicle.id}`}><button>View Details</button></Link>
                             </div>        
                           ) }    
                         </div>
