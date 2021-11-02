@@ -109,13 +109,18 @@ nav ul li {
   margin-right: auto;
   border-radius: 10px;
 }
+.add-to-cart {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
 .add-to-cart button {
   display: flex;
   justify-content: space-between;
   color: white;
   background-color: black;
   padding: 10px 10px 10px 10px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .buttons {
@@ -138,7 +143,23 @@ nav ul li {
   margin-right: 10px;
 }
 .units button {
-  margin: 10px;
+  margin: 5px;
+  background-color: white;
+  color: black;
+  padding: 5px 10px 5px 10px;
+}
+.units-1 button {
+  margin: 5px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border: none;
+}
+#remove-item {
+  background-color: red;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  color: white;
 }
 #cart-order {
   width: 80%;
@@ -168,6 +189,7 @@ table {
   background-color: grey;
   color: white;
   text-align: center;
+  height: auto;
 }
 #links a {
   text-decoration: none;
