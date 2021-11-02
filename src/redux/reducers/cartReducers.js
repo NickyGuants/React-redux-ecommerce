@@ -3,7 +3,7 @@ import { vehicles } from "../../components/products/vehicles";
 
 const initialState = {
     cartItems: [],
-    vehicles: [...vehicles]
+    vehicles: [...vehicles],
 }
 
 const cartReducer = (state = initialState, { payload, type }) => {
