@@ -45,7 +45,7 @@ const cartReducer = (state = initialState, { payload, type }) => {
             }
         case SEARCH_CARS:
             const searchedCar = state.vehicles.filter((car) =>
-                car.name.toLowerCase().includes(payload.toLowerCase()) ||
+                car.make.toLowerCase().includes(payload.toLowerCase()) ||
                 car.model.toLowerCase().includes(payload.toLowerCase())
             );
             return {
