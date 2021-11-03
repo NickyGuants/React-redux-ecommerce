@@ -1,7 +1,7 @@
 import React from "react";
 import '../App.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { decrementItem, incrementItem, removeItem } from '/home/nicky/react-ecommerce/src/redux/actions/cartActions'
+import { decrementItem, incrementItem, removeItem } from '../redux/actions/cartActions'
 
 
 

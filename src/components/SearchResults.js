@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineShoppingCart} from 'react-icons/ai';
 //import { vehicles } from "./vehicles";
 import { useSelector, useDispatch } from 'react-redux';
-import { addItem, decrementItem, incrementItem, removeItem } from '/home/nicky/react-ecommerce/src/redux/actions/cartActions'
+import { addItem, decrementItem, incrementItem, removeItem } from '../redux/actions/cartActions'
 import { Link } from 'react-router-dom'
 
 const SearchResults = () => {
