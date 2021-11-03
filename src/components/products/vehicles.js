@@ -80,7 +80,7 @@ export const vehicles = [
         name: "Mercedez",
         price: 200000,
         make: "M2",
-        model: "Mercedex",
+        model: "Mercedez",
         year: "2018",
         instock: 43,
         description:
