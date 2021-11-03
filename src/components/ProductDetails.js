@@ -32,7 +32,7 @@ const ProductDetails = () => {
                     <div>
                         <p>Name: {vehicle[0].name}</p>
                         <p>Year: {vehicle[0].year}</p>
-                        <p>Price: ${vehicle[0].price}</p>
+                        <p>Price: ${vehicle[0].price.toLocaleString()}</p>
                     </div>
                     <div className="details-items">
                         <div className="details-item">
