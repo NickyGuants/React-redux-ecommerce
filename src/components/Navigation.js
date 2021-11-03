@@ -2,6 +2,7 @@ import React from "react";
 import '../App.css';
 import { Link } from 'react-router-dom'
 import Search from "./Search";
+import { AiOutlineShoppingCart} from 'react-icons/ai';
 
 const Navigation = () =>{
     return(
@@ -11,11 +12,9 @@ const Navigation = () =>{
                     <h1>Pearl Shine Motors</h1>
                 </div>
                 <Search />
-                <nav>
-                    <ul>
-                        <li><Link to="/">HOME</Link></li>
-                        <li><Link to="/cart">CART</Link></li>
-                    </ul>
+                <nav>  
+                    <Link to="/">HOME</Link>
+                    <Link to="/cart">CART<AiOutlineShoppingCart className="cart-ic" /></Link>
                 </nav>
             </header>
         </div>
