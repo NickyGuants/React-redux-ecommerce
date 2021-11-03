@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import { AiOutlineShoppingCart} from 'react-icons/ai';
-import { addItem, decrementItem, incrementItem, removeItem } from '/home/nicky/react-ecommerce/src/redux/actions/cartActions'
+import { addItem, decrementItem, incrementItem, removeItem } from '../redux/actions/cartActions'
 
 const ProductDetails = () => {
     const products = useSelector((state) => state.cart.vehicles);
