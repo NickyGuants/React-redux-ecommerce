@@ -8,6 +8,8 @@ import { decrementItem, incrementItem, removeItem } from '/home/nicky/react-ecom
 const Cart = () => {
     const  cartItems  = useSelector((state) => state.cart.cartItems)
     const dispatch = useDispatch();
+    let subTotal = 0;
+    let totalDiscount = 0;
 
 
     return (
@@ -29,13 +31,16 @@ const Cart = () => {
                             <th>Remove Item</th>
                         </tr>
                         {cartItems.map((item) => {
-                            let total = item.price * item.quantity;
+                            
                             function getDiscount (){
                                 if (item.quantity > 5) {
-                                    return item.price * item.quantity * 0.5;
+                                    return item.price * item.quantity * 0.05;
                                 }
                                 return 0;
                             }
+                            let total = (item.price * item.quantity)-getDiscount();
+                            subTotal += total;
+                            totalDiscount += getDiscount();
                             
                             return (
                             <>
@@ -51,9 +56,9 @@ const Cart = () => {
                                     {item.quantity}
                                     <button onClick={() => dispatch(incrementItem(item.id))}>+</button>
                                 </div></td>
-                                <td>${item.price}</td>
-                                    <td>${ getDiscount() }</td>
-                                    <td>${ total}</td>
+                                <td>${item.price.toLocaleString()}</td>
+                                    <td>${ getDiscount().toLocaleString() }</td>
+                                    <td>${ total.toLocaleString()}</td>
                                 <td><button id="remove-item" onClick={() => dispatch(removeItem(item.id))}>X</button></td>
                                     </tr>
                                     
@@ -67,13 +72,20 @@ const Cart = () => {
                 <div className="table">
                     <table>
                         <tr>
-                            <td>{  }</td>
+                            <th>Sub Total:</th>
+                            <td>${subTotal.toLocaleString()}</td>
                         </tr>
-                   </table>
+                        <tr>
+                            <th>Total Discount:</th>
+                            <td>${totalDiscount.toLocaleString()}</td>
+                        </tr>
+                       
+                        
+                    </table>
                 </div>
                 <div id="links">
                     <button>Checkout</button>
-                    <a href="#home">Continue shopping</a>
+                    <button>Continue shopping</button>
                 </div>
             </div>
         </section>
