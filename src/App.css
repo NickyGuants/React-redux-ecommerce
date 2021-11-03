@@ -28,13 +28,10 @@ nav {
   align-items: center;
   justify-content: space-evenly;
 }
-nav ul {
-  display: flex;
-  flex-direction: row;
+nav a {
   text-decoration: none;
-}
-nav ul li {
-  margin: 20px;
+  color: white;
+  margin: 10px;
 }
 
 .hero {
@@ -129,6 +126,10 @@ nav ul li {
   background-color: black;
   padding: 10px 10px 10px 10px;
   margin: 10px;
+}
+.add-to-cart a {
+  flex-direction: row;
+  text-decoration: none;
 }
 
 .buttons {
