@@ -7,7 +7,7 @@ import { SliderData } from "./hero/SliderData";
 const Home = () => {
     return (
         <div className="home">
-            <Hero slides={SliderData}/>
+            <Hero slides={SliderData} />
             <Product /> 
         </div>
     )
