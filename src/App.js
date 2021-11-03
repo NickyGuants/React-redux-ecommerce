@@ -5,7 +5,7 @@ import Cart from './components/Cart';
 import ProductDetails from './components/ProductDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home';
-
+import SearchResults from './components/SearchResults';
 
 function App() {
   return (
@@ -15,8 +15,9 @@ function App() {
           <Switch>
             <Route path="/"  exact><Home /></Route>
             <Route path="/cart" ><Cart /></Route>
+            <Route path="/search-results" ><SearchResults /></Route>
             <Route path="/details/:id" ><ProductDetails /></Route>
-          </Switch>
+            </Switch>
         <Footer/>
       </div>
     </Router>
