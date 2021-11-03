@@ -49,7 +49,7 @@ const cartReducer = (state = initialState, { payload, type }) => {
                 car.model.toLowerCase().includes(payload.toLowerCase())
             );
             return {
-                ...state, cars: [...searchedCar ]
+                ...state, searchedCars: [...searchedCar ]
             }
         default: return state;
     }
