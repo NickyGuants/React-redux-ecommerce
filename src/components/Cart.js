@@ -21,21 +21,24 @@ const Cart = () => {
                     <div className="table">
                         <table>
                             <tr>
-                                <th>Product Details</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Discount</th>
+                            <th>Product Details</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Discount</th>
                             <th>Total</th>
                             <th>Remove Item</th>
                         </tr>
                         {cartItems.map((item) => {
-                            function getDiscount() {
+                            let total = item.price * item.quantity;
+                            function getDiscount (){
                                 if (item.quantity > 5) {
                                     return item.price * item.quantity * 0.5;
                                 }
                                 return 0;
                             }
-                            return(
+                            
+                            return (
+                            <>
                             <tr>
                                 <td><img src={item.imgSrc} alt="" width="200px" /></td>
                                 <td><div className="units-1"><button onClick={() => {
@@ -50,15 +53,24 @@ const Cart = () => {
                                 </div></td>
                                 <td>${item.price}</td>
                                     <td>${ getDiscount() }</td>
-                                <td>${item.price * item.quantity}</td>
+                                    <td>${ total}</td>
                                 <td><button id="remove-item" onClick={() => dispatch(removeItem(item.id))}>X</button></td>
-                            </tr>
+                                    </tr>
+                                    
+                             </>   
                         )})}
                         </table>
                     </div>
                 </div>
             <div className="order">
                 <div><h1>Order Summary</h1></div>
+                <div className="table">
+                    <table>
+                        <tr>
+                            <td>{  }</td>
+                        </tr>
+                   </table>
+                </div>
                 <div id="links">
                     <button>Checkout</button>
                     <a href="#home">Continue shopping</a>
