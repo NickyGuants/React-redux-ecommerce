@@ -1,4 +1,4 @@
-import { ADD_ITEM, REMOVE_ITEM, INCREMENT_ITEM, DECREMENT_ITEM } from "../types";
+import { ADD_ITEM, REMOVE_ITEM, INCREMENT_ITEM, DECREMENT_ITEM, SEARCH_CARS } from "../types";
 
 export const addItem = (id) =>{
     return {
@@ -28,3 +28,10 @@ export const decrementItem = (id) => {
         payload: id
     };
 };
+
+export const searchCars = (input) => {
+    return {
+        type: SEARCH_CARS,
+        payload: input
+    }
+}
