@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchCars } from "../redux/actions/cartActions";
-import {  AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { Link } from 'react-router-dom'
 
 export default function Search() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ export default function Search() {
           placeholder="Search for car"
           onChange={(e) => setInput(e.target.value)}
               />
-        <AiOutlineSearch className="search-icon" onClick={()=> handleSubmit(input)} />
+        <Link to="/search-results"><AiOutlineSearch className="search-icon" onClick={()=> handleSubmit(input)} /></Link>
       </div>
     </div>
   );
