@@ -262,3 +262,68 @@ table {
   justify-content: center;
   bottom: 0;
 }
+
+@media only screen and (max-width: 580px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+  header div h1 {
+    font-size: 30px;
+  }
+  .search-input input {
+    margin-right: 10px;
+  }
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 700px;
+    margin-top: 35px;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 2rem;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  .container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    box-shadow: 0 4px 8px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  .card img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+}

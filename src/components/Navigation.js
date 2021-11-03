@@ -2,7 +2,7 @@ import React from "react";
 import '../App.css';
 import { Link } from 'react-router-dom'
 import Search from "./Search";
-import { AiOutlineShoppingCart} from 'react-icons/ai';
+
 
 const Navigation = () =>{
     return(
@@ -14,7 +14,7 @@ const Navigation = () =>{
                 <Search />
                 <nav>  
                     <Link to="/">HOME</Link>
-                    <Link to="/cart">CART<AiOutlineShoppingCart className="cart-ic" /></Link>
+                    <Link to="/cart">CART</Link>
                 </nav>
             </header>
         </div>
