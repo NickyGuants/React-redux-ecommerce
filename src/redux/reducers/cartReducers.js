@@ -1,9 +1,10 @@
-import { ADD_ITEM, REMOVE_ITEM, INCREMENT_ITEM, DECREMENT_ITEM } from '../types'
+import { ADD_ITEM, REMOVE_ITEM, INCREMENT_ITEM, DECREMENT_ITEM, SEARCH_CARS } from '../types'
 import { vehicles } from "../../components/products/vehicles";
 
 const initialState = {
     cartItems: [],
     vehicles: [...vehicles],
+    searchedCars:[]
 }
 
 const cartReducer = (state = initialState, { payload, type }) => {
@@ -41,6 +42,14 @@ const cartReducer = (state = initialState, { payload, type }) => {
                     ? { ...item, quantity: item.quantity-1 }
                     : item
                 )
+            }
+        case SEARCH_CARS:
+            const searchedCar = state.vehicles.filter((car) =>
+                car.name.toLowerCase().includes(payload.toLowerCase()) ||
+                car.model.toLowerCase().includes(payload.toLowerCase())
+            );
+            return {
+                ...state, cars: [...searchedCar ]
             }
         default: return state;
     }
