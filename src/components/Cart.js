@@ -8,6 +8,8 @@ import { decrementItem, incrementItem, removeItem } from '/home/nicky/react-ecom
 const Cart = () => {
     const  cartItems  = useSelector((state) => state.cart.cartItems)
     const dispatch = useDispatch();
+
+
     return (
         <section id="cart-order">
                 
@@ -26,25 +28,32 @@ const Cart = () => {
                             <th>Total</th>
                             <th>Remove Item</th>
                         </tr>
-                        {cartItems.map((item) => (
+                        {cartItems.map((item) => {
+                            function getDiscount() {
+                                if (item.quantity > 5) {
+                                    return item.price * item.quantity * 0.5;
+                                }
+                                return 0;
+                            }
+                            return(
                             <tr>
                                 <td><img src={item.imgSrc} alt="" width="200px" /></td>
                                 <td><div className="units-1"><button onClick={() => {
-                                        if (item.quantity <= 1) {
-                                            dispatch(removeItem(item.id));
-                                        } else {
-                                            dispatch(decrementItem(item.id));
-                                        }
+                                    if (item.quantity <= 1) {
+                                        dispatch(removeItem(item.id));
+                                    } else {
+                                        dispatch(decrementItem(item.id));
+                                    }
                                 }}>-</button>
                                     {item.quantity}
-                                    <button onClick={ () => dispatch(incrementItem(item.id))}>+</button>
+                                    <button onClick={() => dispatch(incrementItem(item.id))}>+</button>
                                 </div></td>
                                 <td>${item.price}</td>
-                                <td>$0</td>
+                                    <td>${ getDiscount() }</td>
                                 <td>${item.price * item.quantity}</td>
                                 <td><button id="remove-item" onClick={() => dispatch(removeItem(item.id))}>X</button></td>
                             </tr>
-                        ))}
+                        )})}
                         </table>
                     </div>
                 </div>
