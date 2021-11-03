@@ -29,7 +29,7 @@ const Product = () => {
                             </Link>
                             <p>Model: {vehicle.make}</p>
                             <p>Make: {vehicle.model}</p>
-                            <p>Price: ${vehicle.price}</p>
+                            <p>Price: ${vehicle.price.toLocaleString()}</p>
                             {inCart ? (
                             <div className="buttons">
                                 <div className="units">
