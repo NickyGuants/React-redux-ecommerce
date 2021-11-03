@@ -17,7 +17,7 @@ export default function Search() {
           type="text"
           id="search"
           value={input}
-          placeholder="Search for car"
+          placeholder="Search for car by make or model"
           onChange={(e) => setInput(e.target.value)}
               />
         <Link to="/search-results"><AiOutlineSearch className="search-icon" onClick={()=> handleSubmit(input)} /></Link>
