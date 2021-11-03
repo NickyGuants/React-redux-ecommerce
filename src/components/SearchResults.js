@@ -9,8 +9,6 @@ const SearchResults = () => {
     const searchResults = useSelector((state) => state.cart.searchedCars);
     const cartItems = useSelector((state) => state.cart.cartItems);
     const dispatch = useDispatch();
-    console.log("h");
-
     return (
         <section className="container">
             <div className="products">
