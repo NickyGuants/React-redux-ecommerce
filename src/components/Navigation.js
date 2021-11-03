@@ -1,6 +1,7 @@
 import React from "react";
 import '../App.css';
 import { Link } from 'react-router-dom'
+import Search from "./Search";
 
 const Navigation = () =>{
     return(
@@ -9,6 +10,7 @@ const Navigation = () =>{
                 <div>
                     <h1>Pearl Shine Motors</h1>
                 </div>
+                <Search />
                 <nav>
                     <ul>
                         <li><Link to="/">HOME</Link></li>
