@@ -195,15 +195,20 @@ table {
 }
 .order {
   width: 30%;
+  display: flex;
+  flex-direction: column;
   background-color: grey;
   color: white;
   text-align: center;
   height: auto;
 }
-#links a {
-  text-decoration: none;
-  color: white;
+#links {
+  margin-top: 50px;
 }
+#links button {
+  margin: 20px;
+}
+
 #details-page {
   display: flex;
   flex-direction: column;
