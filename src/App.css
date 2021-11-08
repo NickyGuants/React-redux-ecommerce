@@ -32,6 +32,17 @@ nav a {
   text-decoration: none;
   color: white;
   margin: 10px;
+  font-size: 25px;
+}
+.cart-link {
+  position: relative;
+  font-size: 30px;
+}
+span {
+  position: absolute;
+  right: -1;
+  color: white;
+  font-size: 20px;
 }
 
 .hero {
@@ -145,6 +156,7 @@ nav a {
 .cart-icon {
   margin-right: 20px;
 }
+
 .units {
   display: flex;
   flex-direction: row;
@@ -265,7 +277,6 @@ table {
   align-items: center;
   width: 100%;
   justify-content: center;
-  bottom: 0;
 }
 
 @media only screen and (max-width: 580px) {
